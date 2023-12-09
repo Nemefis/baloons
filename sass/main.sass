@@ -25,59 +25,61 @@ body
         height: 70px
         top: 50px
         left: 50px
+    &__box
+        position: absolute
+        top: 40%
+        left: 50%
+        width: 100%
+        transform: translate(-50%, -50%)
+        text-align: center
 
+.title-first
+    color: #fff
+    &__main
+        font-size: 50px
+        font-weight: 800
+        letter-spacing: 10px
+        display: block
+        text-transform: uppercase
+        margin-bottom: 10px
+        animation-name: leftToRight
+        animation-delay: 0.5s
+        animation-duration: 1s
+    &__second
+        font-size: 40px
+        font-weight: 300
+        letter-spacing: 5px
+        display: block
+        animation-name: rightToLeft
+        animation-delay: 0.5s
+        animation-duration: 1s
+    
+@keyframes leftToRight
+    0%
+        opacity: 0
+        transform: translateX(-20px)
+    80%
+        transform: translateX(10px)
+    100%
+        opacity: 1
+        transform: translateX(0px)
 
+@keyframes rightToLeft
+    0%
+        opacity: 0
+        transform: translateX(20px)
+    80%
+        transform: translateX(-10px)
+    100%
+        opacity: 1
+        transform: translateX(0px)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .header
-//     position: relative
-//     height: 95vh
-//     background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0.03%, rgba(1, 1, 1, 0.70) 99.94%), url("../img/header_background.jpg") center / cover no-repeat
-//     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%)
-//     &__logo
-//         height: 70px
-//         width: 56px
-//         position: absolute
-//         left: 50px
-//         top: 50px
-//  В конце занятия
-//     &__box
-//         position: absolute
-//         top: 40%
-//         left: 50%
-//         transform: translate(-50%, -50%)
-//         width: 100%
-//         text-align: center
-// .title-first
-//     color: #fff
-//     &__main
-//         display: block
-//         font-weight: 800
-//         font-size: 50px
-//         line-height: 60px
-//         letter-spacing: 10px
+// .btn
+//     &:link, &:visited
 //         text-transform: uppercase
-//         margin-bottom: 10px
-//     &__seocndary
-//         display: block
-//         font-weight: 200
-//         font-size: 40px
-//         line-height: 48px
-//         letter-spacing: 5px
+//         text-decoration: none
+//         padding: 15px 40px
+//         border-radius: 50px
+//         color: #777
+//         background: white
+//         display: inline-block

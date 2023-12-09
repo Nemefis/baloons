@@ -30,4 +30,63 @@ body {
   height: 70px;
   top: 50px;
   left: 50px;
+}
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title-first {
+  color: #fff;
+}
+.title-first__main {
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 10px;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  animation-name: leftToRight;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+}
+.title-first__second {
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  display: block;
+  animation-name: rightToLeft;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+}
+
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }/*# sourceMappingURL=main.css.map */
