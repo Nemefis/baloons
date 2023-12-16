@@ -62,6 +62,49 @@ body {
   animation-name: rightToLeft;
   animation-delay: 0.5s;
   animation-duration: 1s;
+  backface-visibility: hidden;
+  animation-timing-function: ease;
+  margin-bottom: 50px;
+}
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  color: #777;
+  background: white;
+  display: inline-block;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 20px;
+}
+.btn:hover {
+  transform: translateY(-4px);
+}
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.5) scaleY(1.7);
+}
+.btn:active {
+  transform: translateY(-2px);
+}
+.btn::after {
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 1s;
+}
+.btn_animated {
+  animation: BtnToUp 0.5s ease-out 0.7s;
+  animation-fill-mode: backwards;
 }
 
 @keyframes leftToRight {
@@ -88,5 +131,15 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0px);
+  }
+}
+@keyframes BtnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }/*# sourceMappingURL=main.css.map */
