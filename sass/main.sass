@@ -1,121 +1,19 @@
-*
-    margin: 0
-    padding: 0
-    box-sizing: border-box
+@import "abstracts/mixins.sass"
+@import "abstracts/variable.sass"
 
-body
-    font-family: 'Lato', sans-serif
-    color: #777
-    font-size: 16px
-    font-weight: 400
-    letter-spacing: 2px
-    padding: 50px
+@import "base/base.sass"
+@import "base/animation.sass"
+@import "base/typography.sass"
+@import "base/utilities.sass"
 
-.container 
-    background-color: #f7f7f7
+@import "components/button.sass"
 
-.header
-    position: relative
-    background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0.03%, rgba(1, 1, 1, 0.70) 99.94%), url(../img/header_background.jpg) center / cover no-repeat
-    height: 95vh
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
-    &__logo
-        position: absolute
-        width: 56px
-        height: 70px
-        top: 50px
-        left: 50px
-    &__box
-        position: absolute
-        top: 40%
-        left: 50%
-        width: 100%
-        transform: translate(-50%, -50%)
-        text-align: center
+@import "layout/header.sass"
 
-.title-first
-    color: #fff
-    &__main
-        font-size: 50px
-        font-weight: 800
-        letter-spacing: 10px
-        display: block
-        text-transform: uppercase
-        margin-bottom: 10px
-        animation-name: leftToRight
-        animation-delay: 0.5s
-        animation-duration: 1s
-    &__second
-        font-size: 40px
-        font-weight: 300
-        letter-spacing: 5px
-        display: block
-        animation-name: rightToLeft
-        animation-delay: 0.5s
-        animation-duration: 1s
-        backface-visibility: hidden
-        animation-timing-function: ease
-        margin-bottom: 50px
+@import "pages/home.sass"
 
-.btn
-    &:link, &:visited
-        text-transform: uppercase
-        text-decoration: none
-        padding: 15px 40px
-        border-radius: 50px
-        color: #777
-        background: white
-        display: inline-block
-        transition: all 0.3s
-        position: relative
-        font-size: 20px
-    &:hover
-        transform: translateY(-4px)
-        &::after
-            opacity: 0
-            transform: scaleX(1.5) scaleY(1.7)
-    &:active
-        transform: translateY(-2px)
-    &::after
-        content: ""
-        background: #fff
-        width: 100%
-        height: 100%
-        border-radius: 50px
-        display: inline-block
-        position: absolute
-        top: 0
-        left: 0
-        z-index: -1
-        transition: all 1s
-    &_animated
-        animation: BtnToUp .5s ease-out .7s
-        animation-fill-mode: backwards
-    
-@keyframes leftToRight
-    0%
-        opacity: 0
-        transform: translateX(-20px)
-    80%
-        transform: translateX(10px)
-    100%
-        opacity: 1
-        transform: translateX(0px)
-
-@keyframes rightToLeft
-    0%
-        opacity: 0
-        transform: translateX(20px)
-    80%
-        transform: translateX(-10px)
-    100%
-        opacity: 1
-        transform: translateX(0px)
-
-@keyframes BtnToUp
-    0%
-        opacity: 0
-        transform: translateY(50px)
-    100%
-        opacity: 1
-        transform: translateY(0px)
+// @mixin style-link
+//     text-transform: uppercase
+//     text-decoration: none
+//     display: inline-block
+//     color: $color-gray
